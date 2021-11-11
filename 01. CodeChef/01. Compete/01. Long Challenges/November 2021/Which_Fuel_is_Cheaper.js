@@ -22,7 +22,7 @@ function readLine() {
     return inputString[currentLine++];
 }
 
-function getMaxLessThanK(X, Y, A, B, K) {
+function getCheaperFuel(X, Y, A, B, K) {
     const XatK = X + K * A;
     const YatB = Y + K * B;
     
@@ -37,6 +37,6 @@ function main() {
     for (let i = 0; i < q; i++) {
         const [X, Y, A, B, K] = readLine().split(' ').map(Number);
         
-        console.log(getMaxLessThanK(X, Y, A, B, K));
+        console.log(getCheaperFuel(X, Y, A, B, K));
     }
 }
