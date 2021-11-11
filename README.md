@@ -1,2 +1,2 @@
 # Competitive-Programming
-The Repository Contains the Competitive Programming Questions and Contest On Different Platforms. like Codechef, Leetcode, etc.
+The repository contains my solutions for Competitive Programming questions and contests on different platforms like Codechef, Leetcode, etc.
