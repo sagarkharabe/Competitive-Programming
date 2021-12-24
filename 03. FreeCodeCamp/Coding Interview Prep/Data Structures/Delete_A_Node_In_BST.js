@@ -18,6 +18,14 @@ function BinarySearchTree() {
       return null;
     }
 
+    function findMinValue (node) {
+      if(!node) return null;
+      while(node.left) {
+        node = node.left;
+      }
+      return node.value;
+    }
+
     function findAndRemove(node, parent = null) {
       if(node.value > target) {
         if(node.left) {
@@ -29,9 +37,9 @@ function BinarySearchTree() {
           } else return null;
       } else {
           if(node.left && node.right) {
-              let minValue = this.findMinValue(node.right);
+              let minValue = findMinValue(node.right);
               node.value = minValue;
-              return this.findAndRemove(minValue, node.right)
+              return findAndRemove(minValue, node)
           } else if(parent === null) {
             if(node.left) {
               node.value = node.left.value;
@@ -48,15 +56,6 @@ function BinarySearchTree() {
           }
       }
     }
-
     findAndRemove(this.root)
-  },
-
-  this.findMinValue = function(node) {
-    if(!node) return null;
-    while(node.left) {
-      node = node.left;
-    }
-    return node.value;
   }
 }
