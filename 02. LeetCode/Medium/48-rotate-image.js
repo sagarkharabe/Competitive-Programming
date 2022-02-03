@@ -22,6 +22,8 @@ var rotate = function(matrix) {
     }
 };
 
+// USEFUL LINK FOR MATRIX VARIATIONS - https://leetcode.com/problems/rotate-image/discuss/1600966/All-Matrix-Rotations-(-90-180-270)-for-both-Square-and-Rectangular-Matrix
+
 
 // transpose and reflect -> Reverse on Diagonal and then Reverse Left to Right
 var rotate = function(matrix) {
