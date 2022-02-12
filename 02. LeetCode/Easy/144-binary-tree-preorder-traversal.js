@@ -31,3 +31,21 @@ var preorderTraversal = function(root) {
     
     return result;
 };
+
+// Easier -> Right - Left - Mid and then reverse();
+var postorderTraversal = function(root) {
+    if(!root) return [];
+    
+    let result = [];
+    let stack = [root];
+    
+    while(stack.length) {
+        const current = stack.pop();
+        
+        result.push(current.val);
+        if(current.left) stack.push(current.left);
+        if(current.right) stack.push(current.right);
+    }
+    
+    return result.reverse();
+}
